@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BookHaven</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<header>
+    <h2>📖 BookHaven</h2>
+    <input type="text" id="search"
+    placeholder="Search by book, reader...">
+    <button onclick="searchBook()">Search</button>
+</header>
+
+<div class="container">
+
+    <div class="heading">
+        <h1>🏛️ Library Desk</h1>
+        <span id="count">3 books</span>
+    </div>
+
+    <div class="form-box">
+
+        <div>
+            <label>👤 Reader</label>
+            <input type="text" id="reader"
+            placeholder="e.g. James">
+        </div>
+
+        <div>
+            <label>📚 Book</label>
+            <input type="text" id="book"
+            placeholder="e.g. Dune">
+        </div>
+
+        <div>
+            <label>Genre</label><br>
+            <input type="radio" name="genre"
+            value="Fiction" checked> Fiction
+
+            <input type="radio" name="genre"
+            value="Programming"> Programming
+
+            <input type="radio" name="genre"
+            value="Cooking"> Cooking
+        </div>
+
+        <button onclick="addBook()">+ Add Book</button>
+
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Date issued</th>
+                <th>Reader</th>
+                <th>Book</th>
+                <th>Genre</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="bookList"></tbody>
+    </table>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
